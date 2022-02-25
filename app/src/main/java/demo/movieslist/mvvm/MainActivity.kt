@@ -25,7 +25,6 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
-//        setContentView(R.layout.activity_main)
         setContentView(binding.root)
 
 
@@ -33,7 +32,6 @@ class MainActivity : AppCompatActivity() {
         val mainRepository = MainRepository(retrofitService)
 
         val myRecyclerView: RecyclerView = binding.recyclerview
-//        val myRecyclerView: RecyclerView = findViewById(R.id.recyclerview)
 
 
         viewModel = ViewModelProvider(this, MyViewModelFactory(mainRepository))
